@@ -147,7 +147,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
 LOGIN_REDIRECT_URL = 'curso:homecursos'
 
 LOGIN_URL = 'curso:login'
@@ -155,4 +154,6 @@ LOGIN_URL = 'curso:login'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+CSRF_TRUSTED_ORIGINS = ['https://asf-production-f5f4.up.railway.app']
 
