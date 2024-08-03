@@ -157,3 +157,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 CSRF_TRUSTED_ORIGINS = ['https://asf-production-f5f4.up.railway.app']
 
+# Código acrescentado para erro no carregamento do file
+
+if DEBUG:
+  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+else:
+  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
