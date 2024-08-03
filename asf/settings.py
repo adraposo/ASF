@@ -162,6 +162,6 @@ CSRF_TRUSTED_ORIGINS = ['https://asf-production-f5f4.up.railway.app']
 if DEBUG:
   STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 else:
-  STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
