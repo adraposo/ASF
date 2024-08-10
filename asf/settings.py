@@ -28,7 +28,7 @@ if TOKEN_CSRF:
 else:
     SECRET_KEY = "django-insecure-1!je77o2*g$=&0hp&gtf=(yym9ru4f(o!t67v1p0ib8@wu!10z"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["asf-production-f5f4.up.railway.app", "localhost", "127.0.0.1"]
 
