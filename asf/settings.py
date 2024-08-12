@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import os
+
 from pathlib import Path
+import dj_database_url
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +30,7 @@ if TOKEN_CSRF:
 else:
     SECRET_KEY = "django-insecure-1!je77o2*g$=&0hp&gtf=(yym9ru4f(o!t67v1p0ib8@wu!10z"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["asf-production-f5f4.up.railway.app", "localhost", "127.0.0.1"]
 
@@ -79,7 +81,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "asf.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -89,9 +90,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-import dj_database_url
-import os
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
@@ -140,7 +138,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",
@@ -150,7 +148,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#MEDIA_ROOT = BASE_DIR / "media"
+# MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -165,7 +163,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-CSRF_TRUSTED_ORIGINS = ['https://asf-production-f5f4.up.railway.app']
+# CSRF_TRUSTED_ORIGINS = ['https://asf-production-f5f4.up.railway.app']
 
 # Código acrescentado para erro no carregamento do file
 
